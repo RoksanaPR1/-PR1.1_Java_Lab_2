@@ -9,6 +9,16 @@ public class Main {
           to dać komunikat "liczba XX podzielna przez YY" (XX-liczba podzielna YY-podzielnik)
         */
 
+            int a = 1000;
+            System.out.println("Numer albumu: 56680");
+
+            do
+            {
+                if(a%80==0)
+                System.out.println("liczba " + a + " podzielna przez 80");
+                a--;
+            }
+            while(a>=0);
 
         /* zad 2
         a) stworzyć tablicę typu int wielkosci 5, przypisac jej dowolne wartości,
@@ -17,9 +27,41 @@ public class Main {
         c) jak wyżej dla tablicy String[], przeiterować i wyświetlić od ostatniego elementu
         */
 
+    //a
+        int[] tablica = new int []{1,2,3,4,5};
+        int i = 0;
+        while(i <=4)
+        {
+        System.out.println(tablica[i]);
+        i++;
+        }
+
+    //b
+        double[] tablica = new double []{1.6,2.7,3.8,4.9,5.1};
+        int i = 0;
+        while(i <=4)
+        {
+        System.out.println(tablica[i]);
+        i++;
+        }
+
+    //c
+        String[] tablica = new String []{"kota","rudego","dużego","ma","Ala"};
+        int i = 4;
+        while(i >=0)
+        {
+        System.out.print(tablica[i] + " ");
+        i--;
+        }
+
         /* zad.3
         a) sprawdzić jak zachowuje się pętla while gdy w jej warunku damy true --> while(true)
+
+        ODP: pętla będzie się wykonywać cały czas
+
         b) a jak gdy damy false --> while(false)
+
+        ODP: pętla nie wykona się wcale
         */
 
 
