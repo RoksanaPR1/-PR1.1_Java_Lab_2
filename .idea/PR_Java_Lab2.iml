@@ -94,5 +94,107 @@ public class Main {
         {
           System.out.println(i+11);
         }
+
+
+         /* ćwiczenie 3 switch case */
+
+                /* zad.1 napisać program który przyjmuje jedną liczbę od użytkownika z klawiatury
+                  i za pomocą switch case default ma określić czy:
+                  a) ta liczba jest parzysta --> podpowiedz switch(a % 2) {
+                  b) program który określi czy liczba jest podzielna przez 7
+                 */
+
+         //a
+
+         Scanner scan = new Scanner (System.in);
+         int a = scan.nextInt();
+
+         switch(1)
+         {
+         default:
+         if (a%2==0)
+         System.out.println("Liczba jest parzysta");
+         else
+         System.out.println("Liczba jest nieparzysta");
+         break;
+         }
+
+         //b
+
+         Scanner scan = new Scanner (System.in);
+         int a = scan.nextInt();
+
+         switch(1)
+         {
+         default:
+         if (a%7==0)
+         System.out.println("Liczba jest podzielna przez 7");
+         else
+         System.out.println("Liczba nie jest podzielna przez 7");
+         break;
+         }
+
+
+                /* zad.2
+                   a) napisać program podobny do programu z przykładu, który ma zliczyć iloś liter 'o', 'p', 'x', 'z', 'q' w wyrazie:
+                    "ooooozjoonoxoooozoooooooooozoxooooopnpppoooiiooooomnzooooxoqoojoozoootyoooozoooxoooozooooxooooooojoooopxoooonnmooo"
+                   b) oraz ma określić ile jest pozostałych liter, które nie należą do: 'o', 'p', 'x', 'z', 'q'
+                 */
+
+
+         String wyraz = "ooooozjoonoxoooozoooooooooozoxooooopnpppoooiiooooomnzooooxoqoojoozoootyoooozoooxoooozooooxooooooojoooopxoooonnmooo";
+
+         int o = 0;
+         int p = 0;
+         int x = 0;
+         int z = 0;
+         int q = 0;
+         int znaki = wyraz.length();
+
+         for (char litera : wyraz.toCharArray())
+         {
+           if (litera == 'o')
+           {
+             o++;
+           }
+           else
+           {
+             if (litera == 'p')
+             {
+               p++;
+             }
+             else
+             {
+               if (litera == 'x')
+               {
+                 x++;
+               }
+               else
+               {
+                 if (litera == 'z')
+                 {
+                   z++;
+                 }
+                 else
+                 {
+                   if (litera == 'q')
+                   {
+                     q++;
+                   }
+                 }
+               }
+             }
+           }
+         }
+         System.out.println("W wyrazie znajdują się: "  + o + " liter o, " + p + " liter p, " + x + " liter x, " + z + " liter z, " + q + " liter q.");
+
+         int b = o+p+x+z+q;
+         int a = znaki-b;
+
+         System.out.println("W wyrazie znajduje się " + a + " innych liter.");
+
+         System.out.println(znaki);
+
+
     }
 }
